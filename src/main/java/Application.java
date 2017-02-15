@@ -42,7 +42,7 @@ public class Application {
         ).stream().filter(s -> !s.isEmpty())
                 .map(s -> Pattern.compile(s.replace(
                         "%w+",
-                        "[\\wА-яЁё\\Q!№#%.,:;?\\/()+-“”―_'\"`&^?{}[]<>/\\|!@#$%^()+=~*\\E]*")))
+                        "[\\wА-яЁё \\Q!№#%.,:;?\\/()+-“”―_'\"`&^?{}[]<>/\\|!@#$%^()+=~*\\E]*")))
                 .forEach(patterns::add);
         log.info("Read patterns: {}", patterns.size());
     }
